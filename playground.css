@@ -1,0 +1,265 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 0.9rem; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome and Opera */ }
+
+.opened {
+  width: 100% !important;
+  height: 100vh !important;
+  top: 0;
+  left: 0; }
+
+.logo {
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  padding: 5vh 5vw 0 0;
+  color: white;
+  text-transform: uppercase; }
+  .logo h1 {
+    margin: 0;
+    font-size: calc(100vh / 30); }
+  .logo ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .logo ul li {
+      padding: 3vh 0 0 0; }
+  .logo a {
+    padding: 10px 0 0 0;
+    text-decoration: none;
+    color: white; }
+  .logo a:hover {
+    color: #c756ec; }
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #202020;
+  display: none; }
+  .overlay .spinner {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: #c756ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; }
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes rotating {
+  from {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+    .overlay .spinner .rotating {
+      -webkit-animation: rotating 2s linear infinite;
+      -moz-animation: rotating 2s linear infinite;
+      -o-animation: rotating 2s linear infinite;
+      animation: rotating 2s linear infinite; }
+    .overlay .spinner .hammer-spinner {
+      width: 120%;
+      height: 4vw;
+      background: #202020;
+      position: absolute; }
+    .overlay .spinner .inner-spinner {
+      border-radius: 50%;
+      height: 70%;
+      width: 70%;
+      background: #202020;
+      align-items: center;
+      justify-content: center; }
+
+.main-tv {
+  height: 100vh;
+  width: 100vw;
+  color: #c756ec;
+  background: #202020;
+  display: flex;
+  align-items: center; }
+  .main-tv .visualizer {
+    width: 84vw;
+    height: 100vh;
+    overflow: hidden; }
+    .main-tv .visualizer ul {
+      list-style-type: none;
+      padding: 0 2vw 0 0;
+      margin: 0;
+      overflow-y: scroll;
+      box-sizing: content-box;
+      width: 100%;
+      height: 100%; }
+      .main-tv .visualizer ul li {
+        height: 2.5vh;
+        box-sizing: border-box;
+        background: #202020;
+        transition: 0.125s ease-in-out; }
+      .main-tv .visualizer ul .active {
+        width: 100% !important;
+        opacity: 1; }
+      .main-tv .visualizer ul .active0 {
+        width: 92% !important; }
+      .main-tv .visualizer ul .active1 {
+        width: 84% !important; }
+      .main-tv .visualizer ul .active2 {
+        width: 76% !important; }
+
+#floater {
+  position: absolute;
+  height: 100vh;
+  width: 1.5vh;
+  bottom: 0;
+  right: 0; }
+
+.expand-body {
+  pointer-events: none;
+  height: 100vh;
+  width: 80vw;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #202020; }
+  .expand-body > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; }
+  .expand-body h1 {
+    font-size: calc(100vh / 20);
+    word-break: break-all;
+    padding: 0 20px; }
+
+/* Code for merry html */
+.merry-tv {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: black;
+  background: white;
+  display: flex;
+  align-items: flex-end; }
+  .merry-tv .centerpiece .menu-tv {
+    transition: 0.5s ease-in-out;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    transform-origin: bottom left;
+    transform: rotate(-90deg) translateY(100%) translateX(-25%);
+    box-sizing: border-box; }
+    .merry-tv .centerpiece .menu-tv ul {
+      width: auto;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      text-align: right; }
+      .merry-tv .centerpiece .menu-tv ul li {
+        display: block;
+        transform: rotate(20deg);
+        background-color: black;
+        color: white;
+        margin: 0 0 1vw 0;
+        width: 40vh;
+        padding: 2.5vw 8%;
+        font-weight: 600;
+        font-size: calc(100vw / 60);
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: 0.1s ease-in-out;
+        box-sizing: border-box;
+        border: 2px solid transparent; }
+      .merry-tv .centerpiece .menu-tv ul li:hover {
+        color: black;
+        background: white;
+        border: 2px solid black;
+        padding-right: 35px; }
+  @media only screen and (max-width: 600px) {
+    .merry-tv .centerpiece .centerpiece {
+      overflow: scroll; }
+    .merry-tv .centerpiece .menu-tv {
+      transform: none; }
+      .merry-tv .centerpiece .menu-tv ul li {
+        transform: none;
+        width: 100vw;
+        padding: 3vw 8% 3vw 8%;
+        font-size: 1.2em; }
+      .merry-tv .centerpiece .menu-tv #menu-x-mob {
+        position: absolute;
+        left: 0;
+        top: -40px;
+        height: 40px;
+        width: 40px;
+        background: black; }
+        .merry-tv .centerpiece .menu-tv #menu-x-mob button {
+          height: 100%;
+          width: 100%;
+          background: none;
+          border: none;
+          outline: none;
+          color: white;
+          font-weight: 600;
+          font-size: 2em;
+          transform: rotate(45deg); }
+      .merry-tv .centerpiece .menu-tv #menu-x-full {
+        display: none; } }
+
+.slidden {
+  transform: translateY(150vh) !important; }
+
+.ridden {
+  transform: rotate(-90deg) translateY(200vw) translateX(-25%) !important; }
+
+#menu-x-full {
+  background: white;
+  border: 2px solid black;
+  color: black; }
+
+#menu-x-full:hover {
+  background: #c756ec;
+  color: white; }
+
+.v2 {
+  color: #202020; }
+  .v2 > h1 {
+    font-size: 4em; }
+  .v2 ul li a {
+    color: #202020; }
+
+/*# sourceMappingURL=playground.css.map */
